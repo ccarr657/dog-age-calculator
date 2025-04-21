@@ -21,6 +21,6 @@ jobs:
         python -m pip install --upgrade pip
 
     - name: Run script
-      run: python dog-age-calculator.py  
+      run: python dog-age-calculator/dog-age-calculator/dog-age-calculator.py  
 
 #Add CI Pipeline
