@@ -1,0 +1,26 @@
+name: Python CI
+
+on:
+  push:
+    branches: [ "main" ]  # Runs on push to main branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # This is the virtual machine that runs the code
+
+    steps:
+    - uses: actions/checkout@v3  # Get code
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.12'  
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+
+    - name: Run script
+      run: app.py  
+
+#Add CI Pipeline
