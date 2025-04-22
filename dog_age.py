@@ -6,7 +6,7 @@ def dog_to_human_years(dog_age):
     else:
         return 21 + (dog_age - 2) * 4
 
-#age = float(input("Enter your dog's age in years: "))
-age = 5
+age = float(input("Enter your dog's age in years: "))
+#age = 5
 human_age = dog_to_human_years(age)
 print(f"Your dog is about {human_age} human years old.")    
