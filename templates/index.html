@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Dog Age Calculator</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='styles.css')}}">
+</head>
+
+<body>
+	<h1>Dog Age Calculator</h1>
+	<form method="POST">
+		<div class="form-group">
+			<label for="dog_age">Enter your dog's age in years:  </label>
+			<!--Text input for dog age-->
+			<input type="text" id="dog_age" name="dog_age" required>
+
+			<!--Microphone button-->
+			<button id="microphone" type="button" onclick="showPopup()">Say Age 🎙</button>
+		</div>
+		<button type="submit">Calculate</button>
+	</form>
+
+	<!--Dog age has been converted to human age, here we display the converted age-->
+	{% if human_age %}
+		<div id="result-container">
+			<p id="result-text"> Your dog is about {{ human_age }} human years old.</p>
+			<button id="clear-btn" onclick="clearResult()">Clear</button>
+		</div>
+		{% endif %}
+		<div class="athena-image">
+			<img src="{{ url_for('static', filename='athena_sunset.jpg') }}" alt="Athena">
+			<p style="font-size: 1.2rem; margin-top: 10px;">
+				Hello World! I'm Athena and I am {{ athena_age }} as of today.
+			</p>
+		</div>
+
+		<!--JavaScript for microphone input-->
+		<script src="{{ url_for('static', filename='Microphone.js') }}"></script>
+</body>
+</html>

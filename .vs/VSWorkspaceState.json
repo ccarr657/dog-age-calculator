@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\.gitignore",
+    "\\cli_tools",
+    "\\templates",
+    "\\__pycache__"
+  ],
+  "SelectedNode": "\\converter.py",
+  "PreviewInSolutionExplorer": false
+}
